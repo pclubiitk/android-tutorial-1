@@ -1,0 +1,41 @@
+<!-- We are using relative layout here, so we'll have to define each element wrt it parent or sibling -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+<!-- The android:id tag with @+id/<id> give a new id to the view. -->
+<!-- Each view requires a layout_width and layout_height compulsorily -->
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+        <!-- android:layout_below="@id/text" defines that this imageview is to be placed below the view which has the id as text -->
+        <!-- android:src defines the path of your image -->
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon"
+        android:layout_below="@id/text"
+        />
+     <!-- android:layout_alignParentBottom="true" defines that this view has to be placed at the bottom of its parent, which is the whole relative view in this case -->
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+    <Button 
+        android:id="@+id/btn"
+        android:text="Click me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img"
+        />
+</RelativeLayout>
